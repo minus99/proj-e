@@ -1,0 +1,1502 @@
+/* Multipler */
+@font-face {
+  font-family: "Theinhardt";
+  src: url(/styles/fonts/Theinhardt-Light.eot);
+  src: url(/styles/fonts/Theinhardt-Light.eot?#iefix) format("embedded-opentype"), url(/styles/fonts/Theinhardt-Light.woff) format("woff"), url(/styles/fonts/Theinhardt-Light.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Theinhardt";
+  src: url(/styles/fonts/Theinhardt-Regular.eot);
+  src: url(/styles/fonts/Theinhardt-Regular.eot?#iefix) format("embedded-opentype"), url(/styles/fonts/Theinhardt-Regular.woff) format("woff"), url(/styles/fonts/Theinhardt-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Theinhardt";
+  src: url(/styles/fonts/Theinhardt-Medium.eot);
+  src: url(/styles/fonts/Theinhardt-Medium.eot?#iefix) format("embedded-opentype"), url(/styles/fonts/Theinhardt-Medium.woff) format("woff"), url(/styles/fonts/Theinhardt-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GT-Walsheim";
+  src: url(/styles/fonts/GT-Walsheim.eot);
+  src: url(/styles/fonts/GT-Walsheim.eot?#iefix) format("embedded-opentype"), url(/styles/fonts/GT-Walsheim.woff) format("woff"), url(/styles/fonts/GT-Walsheim.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GT-Walsheim";
+  src: url(/styles/fonts/GT-Walsheim-Medium.eot);
+  src: url(/styles/fonts/GT-Walsheim-Medium.eot?#iefix) format("embedded-opentype"), url(/styles/fonts/GT-Walsheim-Medium.woff) format("woff"), url(/styles/fonts/GT-Walsheim-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Icon";
+  src: url(/styles/fonts/Icon.eot);
+  src: url(/styles/fonts/Icon.eot?#iefix) format("embedded-opentype"), url(/styles/fonts/Icon.woff) format("woff"), url(/styles/fonts/Icon.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-arrowDown:before {
+  content: "\e900"; }
+
+.icon-arrowLeft:before {
+  content: "\e901"; }
+
+.icon-arrowRight:before, .video .play-button:before {
+  content: "\e902"; }
+
+.icon-arrowUp:before {
+  content: "\e903"; }
+
+.icon-bars:before {
+  content: "\e904"; }
+
+.icon-cancel:before, .mobileMenuOpened header nav ul li.mobile i:before {
+  content: "\e905"; }
+
+.icon-logo:before {
+  content: "\e906"; }
+
+.icon-map:before {
+  content: "\e907"; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  text-align: center;
+  font-size: 20px;
+  overflow-x: none;
+  font-family: "Theinhardt";
+  font-weight: 200; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: initial; }
+
+.caption {
+  font-family: "GT-Walsheim";
+  font-weight: 500;
+  font-size: 40px; }
+
+.description {
+  font-family: "Theinhardt";
+  font-weight: 200;
+  font-size: 25px; }
+
+@media screen and (max-width: 960px) {
+  .caption {
+    font-size: 24px; }
+  .description {
+    font-size: 18px; } }
+
+/**
+ * Animations
+ */
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-ms-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-moz-keyframes scale {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@-ms-keyframes scale {
+  0% {
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+
+@-o-keyframes scale {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes scaleReverse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); } }
+
+@-moz-keyframes scaleReverse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0); }
+  100% {
+    transform: scale(0); } }
+
+@-ms-keyframes scaleReverse {
+  0% {
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -ms-transform: scale(0);
+    transform: scale(0); } }
+
+@-o-keyframes scaleReverse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0); }
+  100% {
+    transform: scale(0); } }
+
+@keyframes scaleReverse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); } }
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  font-size: 0; }
+  .banner.full {
+    height: 100vh; }
+  .banner .text {
+    width: 50%;
+    left: 25%;
+    font-family: "GT-Walsheim";
+    font-weight: 600;
+    font-size: 70px;
+    color: color(White, Text);
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute; }
+  .banner img {
+    width: 100%; }
+
+@media screen and (max-width: 960px) {
+  .banner.full {
+    height: auto; }
+  .banner .text {
+    left: 10%;
+    width: 80%;
+    font-size: 40px;
+    line-height: 50px; } }
+
+/**
+* Brands Component
+*/
+.brands {
+  margin: 150px auto 75px;
+  width: 80%;
+  text-align: center; }
+  .brands ul {
+    font-size: 0; }
+    .brands ul li {
+      display: inline-block;
+      width: 20%;
+      height: 125px;
+      text-align: center;
+      vertical-align: middle; }
+      .brands ul li:nth-child(n + 11) {
+        display: none; }
+      .brands ul li img {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        max-width: 100%;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+        -webkit-transition-delay: .2s;
+        -o-transition-delay: .2s;
+        transition-delay: .2s; }
+      .brands ul li.unvisible img {
+        opacity: 0; }
+  .brands .button {
+    margin-top: 75px; }
+
+@media screen and (max-width: 960px) {
+  .brands {
+    margin: 50px auto;
+    width: 90%; }
+    .brands ul li {
+      width: 25%;
+      margin: 4.16667%; }
+      .brands ul li:nth-child(n + 10) {
+        display: none; } }
+
+.button {
+  display: block;
+  padding: 24px 96px;
+  border: none;
+  font-family: 'GT-Walsheim';
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap; }
+  a.button {
+    display: inline-block; }
+  .button[centered] {
+    margin-left: auto;
+    margin-right: auto; }
+  .button[themed], .button[theme="default"] {
+    background-color: #E62739;
+    color: color(White, Text); }
+  .button[margin] {
+    margin: 70px auto 50px; }
+
+.case-study-active {
+  overflow: hidden; }
+  .case-study-active .case-study {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation: scale;
+    -moz-animation: scale;
+    -ms-animation: scale;
+    -o-animation: scale;
+    animation: scale;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s; }
+
+.case-study {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0); }
+  .case-study.hide {
+    -webkit-animation: scaleReverse 0.4s;
+    -moz-animation: scaleReverse 0.4s;
+    -ms-animation: scaleReverse 0.4s;
+    -o-animation: scaleReverse 0.4s;
+    animation: scaleReverse 0.4s; }
+  .case-study .close {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 30px;
+    color: #E62739;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    z-index: 999; }
+  .case-study .banner {
+    overflow: auto;
+    min-height: 100%;
+    position: relative; }
+    .case-study .banner .info {
+      max-width: 400px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background: #000;
+      padding: 40px 100px 100px 30px;
+      color: color(White, Text); }
+    .case-study .banner .caption {
+      padding-bottom: 20px; }
+    .case-study .banner .description {
+      padding-bottom: 100px; }
+    .case-study .banner a {
+      color: color(White, Text);
+      text-decoration: none;
+      font-size: 22px;
+      display: inline-block;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #FFF; }
+  .case-study .change-study {
+    position: relative;
+    height: 300px;
+    padding: 0 100px;
+    font-family: "GT-Walsheim";
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 300px;
+    color: color(White, Text); }
+    .case-study .change-study.prev {
+      background: #622E97; }
+    .case-study .change-study.next {
+      background: #14B1BA;
+      text-align: right; }
+    .case-study .change-study a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  80% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  80% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% {
+    -webkit-transform: sclae(1);
+    transform: sclae(1); } }
+
+@-moz-keyframes scale {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(0.9); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: sclae(1); } }
+
+@-ms-keyframes scale {
+  0% {
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  80% {
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+  80% {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% {
+    -ms-transform: sclae(1);
+    transform: sclae(1); } }
+
+@-o-keyframes scale {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(0.9); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: sclae(1); } }
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  80% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  80% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% {
+    -webkit-transform: sclae(1);
+    transform: sclae(1); } }
+
+@media screen and (max-width: 960px) {
+  .case-study .banner .info {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 30px; }
+    .case-study .banner .info .description {
+      padding-bottom: 25px; }
+  .case-study .change-study {
+    height: 125px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 125px;
+    text-align: center; }
+    .case-study .change-study.next {
+      text-align: center; } }
+
+/**
+* Client Boxes Component
+*/
+.client-boxes {
+  padding: 50px;
+  font-size: 0; }
+  .client-boxes.works > div {
+    cursor: pointer;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out; }
+    .client-boxes.works > div:hover {
+      opacity: 0.8; }
+  .client-boxes.three-boxes > div {
+    width: 33.33333%; }
+  .client-boxes.three-boxes.restricted > div:nth-child(n + 4) {
+    display: none; }
+  .client-boxes > div {
+    display: inline-block; }
+
+@media screen and (max-width: 960px) {
+  .client-boxes {
+    padding: 0; }
+    .client-boxes.three-boxes > div {
+      width: 50%;
+      display: inline-block !important; } }
+
+.client-slider {
+  padding: 100px;
+  position: relative; }
+  .client-slider ul:not(.bullet) {
+    position: relative;
+    overflow: hidden; }
+    .client-slider ul:not(.bullet) li {
+      background: color(White, Text);
+      -webkit-transition: all .55s ease-out;
+      -o-transition: all .55s ease-out;
+      transition: all .55s ease-out;
+      position: relative; }
+      .client-slider ul:not(.bullet) li:not(:first-child) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; }
+      .client-slider ul:not(.bullet) li.active {
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+        z-index: 10; }
+      .client-slider ul:not(.bullet) li:not(.active) {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        x-index: -20; }
+  .client-slider .slider-caption {
+    position: absolute;
+    font-family: "GT-Walsheim";
+    font-weight: 600;
+    font-size: 60px;
+    z-index: 20; }
+  .client-slider .client-name {
+    padding: 130px 0 40px 0;
+    font-family: "GT-Walsheim";
+    font-weight: 300;
+    font-size: 30px; }
+  .client-slider .client-description {
+    font-family: "Theinhardt";
+    font-weight: 300;
+    font-size: 22px; }
+  .client-slider .brand-logos {
+    margin-top: 50px; }
+    .client-slider .brand-logos div {
+      display: inline-block;
+      width: 50%;
+      height: 80px; }
+      .client-slider .brand-logos div img {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+  .client-slider ul.bullet {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    z-index: 99;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .client-slider ul.bullet li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      margin: 0 10px;
+      background: #CCC;
+      cursor: pointer; }
+      .client-slider ul.bullet li.active {
+        background: #E62739; }
+
+@media screen and (max-width: 960px) {
+  .client-slider {
+    padding: 50px 30px; }
+    .client-slider .slider-caption {
+      font-size: 26px; }
+    .client-slider .client-name {
+      padding: 0 0 15px 40%;
+      font-size: 18px; }
+    .client-slider .client-description {
+      padding: 0 0 30px 40%;
+      font-size: 14px; }
+    .client-slider .brand-logos {
+      margin-top: 30px; }
+      .client-slider .brand-logos div {
+        width: 25%;
+        margin: 4.16667%; }
+        .client-slider .brand-logos div img {
+          max-width: 100%; } }
+
+/**
+* Column Component
+**/
+.column-wrapper {
+  font-size: 0; }
+  .column-wrapper > div, .column-wrapper [class*="col-"] {
+    display: inline-block;
+    vertical-align: top; }
+  .column-wrapper .col-10 {
+    width: 10%; }
+  .column-wrapper .col-20 {
+    width: 20%; }
+  .column-wrapper .col-30 {
+    width: 30%; }
+  .column-wrapper .col-40 {
+    width: 40%; }
+  .column-wrapper .col-50 {
+    width: 50%; }
+  .column-wrapper .col-60 {
+    width: 60%; }
+  .column-wrapper .col-70 {
+    width: 70%; }
+  .column-wrapper .col-80 {
+    width: 80%; }
+  .column-wrapper .col-90 {
+    width: 90%; }
+  .column-wrapper .col-100 {
+    width: 100%; }
+
+@media screen and (max-width: 960px) {
+  .hidden-mobile {
+    display: none !important; }
+  .mobile-padding {
+    padding-left: 30px !important; }
+  .column-wrapper .col-mobile-10 {
+    width: 10%; }
+  .column-wrapper .col-mobile-20 {
+    width: 20%; }
+  .column-wrapper .col-mobile-30 {
+    width: 30%; }
+  .column-wrapper .col-mobile-40 {
+    width: 40%; }
+  .column-wrapper .col-mobile-50 {
+    width: 50%; }
+  .column-wrapper .col-mobile-60 {
+    width: 60%; }
+  .column-wrapper .col-mobile-70 {
+    width: 70%; }
+  .column-wrapper .col-mobile-80 {
+    width: 80%; }
+  .column-wrapper .col-mobile-90 {
+    width: 90%; }
+  .column-wrapper .col-mobile-100 {
+    width: 100%; } }
+
+@media screen and (min-width: 960px) {
+  .hidden-desktop {
+    display: none !important; } }
+
+.contact-rows {
+  font-size: 0; }
+  .contact-rows > div {
+    display: inline-block;
+    width: 33.33333%;
+    position: relative;
+    padding: 60px;
+    vertical-align: top;
+    min-height: 300px; }
+    .contact-rows > div.business {
+      background: #E3E3E3; }
+    .contact-rows > div.jobs {
+      background: #E62739;
+      color: #FFF; }
+    .contact-rows > div.sayhi {
+      background: #383838;
+      color: #FFF; }
+  .contact-rows .caption {
+    padding-bottom: 5px; }
+  .contact-rows .mail {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    font-family: "Theinhardt";
+    font-weight: 300;
+    font-size: 22px;
+    color: inherit; }
+
+@media screen and (max-width: 960px) {
+  .contact-rows > div {
+    width: 100%;
+    padding: 30px;
+    min-height: 180px; }
+  .contact-rows .caption {
+    padding-bottom: 10px; }
+  .contact-rows .mail {
+    bottom: 30px;
+    left: 30px; } }
+
+.counters {
+  font-size: 0; }
+  .counters.four-property > div {
+    width: 25%; }
+  .counters.three-property > div {
+    width: 33.33333%;
+    margin-bottom: 100px; }
+  .counters > div {
+    display: inline-block;
+    vertical-align: top; }
+  .counters .number {
+    font-family: "GT-Walsheim";
+    font-weight: 500;
+    font-size: 70px;
+    margin-bottom: 40px; }
+  .counters .text {
+    font-family: "Theinhardt";
+    font-weight: 200;
+    font-size: 30px;
+    padding-right: 20px; }
+  .counters.dark-theme {
+    background: #231F2E;
+    padding: 180px 120px 20px;
+    color: color(White, Text); }
+
+@media screen and (max-width: 960px) {
+  .counters.four-property > div {
+    width: 50%; }
+  .counters.three-property > div {
+    width: 100%; }
+  .counters.dark-theme {
+    background: #231F2E;
+    padding: 50px 30px 20px;
+    color: color(White, Text); }
+  .counters > div {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 50px; }
+  .counters .number {
+    font-size: 50px;
+    margin-bottom: 20px; }
+  .counters .text {
+    font-size: 25px; } }
+
+.heading {
+  display: inline-block;
+  min-width: 50%;
+  margin: 100px auto 50px auto;
+  font-family: "GT-Walsheim";
+  font-weight: 500;
+  text-align: center; }
+  h1.heading {
+    font-size: 60px; }
+  h3.heading {
+    font-size: 40px; }
+  .heading.centered {
+    width: 100%; }
+  .heading.left {
+    width: 100%;
+    padding-left: 100px;
+    text-align: left; }
+
+@media screen and (max-width: 960px) {
+  .heading {
+    margin: 50px auto 25px auto; }
+    h1.heading {
+      font-size: 30px; }
+    h3.heading {
+      font-size: 40px; }
+    .heading.left {
+      padding-left: 20px; } }
+
+/**
+* Headline Component
+*/
+.headline {
+  margin: 200px auto;
+  width: 60%;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 60px;
+  font-family: "GT-Walsheim";
+  font-weight: 500; }
+
+@media screen and (max-width: 960px) {
+  .headline {
+    margin: 50px auto;
+    font-size: 21px;
+    line-height: 30px; } }
+
+.hire-rows ul li:nth-child(even) > div:last-child {
+  float: left; }
+
+.hire-rows ul li:before, .hire-rows ul li:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.hire-rows ul li > div {
+  position: relative; }
+
+.hire-rows ul li .caption, .hire-rows ul li .description {
+  padding: 100px 100px 0; }
+
+.hire-rows ul li .description {
+  padding-top: 50px; }
+
+.hire-rows ul li .button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+@media screen and (max-width: 960px) {
+  .hire-rows ul li {
+    width: 90%;
+    margin: 50px auto; }
+    .hire-rows ul li .caption, .hire-rows ul li .description {
+      padding: 10px 0 25px; } }
+
+.language {
+  position: relative;
+  margin: 0;
+  font-size: 0; }
+  .language input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    max-height: 0;
+    min-height: 0;
+    max-width: 0;
+    min-width: 0;
+    border: 0; }
+    .language input:focus + label {
+      background: color(White, Text);
+      color: #000; }
+      .language input:focus + label + ul {
+        display: block; }
+  .language label {
+    padding: 10px 15px;
+    font-size: 15px; }
+  .language ul {
+    display: none;
+    position: absolute;
+    background: color(White, Text);
+    width: 100%;
+    right: 0;
+    top: 100%;
+    font-size: 15px;
+    padding: 10px 0; }
+    .language ul li {
+      width: 100%;
+      color: #000;
+      margin: 0;
+      padding: 0px 15px; }
+      .language ul li a {
+        padding: 0;
+        color: #000; }
+        .language ul li a img {
+          display: none; }
+        .language ul li a.selected b {
+          color: #E62739; }
+  .reverse .language label {
+    color: #000; }
+  .reverse .language input:focus + label {
+    background: #000;
+    color: color(White, Text); }
+  .reverse .language ul li, .reverse .language ul li a {
+    color: color(White, Text); }
+
+.locations .caption {
+  padding: 100px; }
+
+.locations .description, .locations .map {
+  padding-left: 100px; }
+
+.locations .map {
+  padding-top: 100px;
+  cursor: pointer;
+  display: inline-block;
+  color: inherit; }
+  .locations .map i {
+    font-size: 15px;
+    color: #E62739; }
+
+@media screen and (max-width: 960px) {
+  .locations .caption {
+    padding: 30px; }
+  .locations .description, .locations .map {
+    padding-left: 30px;
+    padding-right: 20px; }
+  .locations .map {
+    padding-top: 50px; } }
+
+/**
+* Tabs Component
+*/
+.tabs .caption-panel {
+  width: 100%;
+  text-align: center; }
+  .tabs .caption-panel .tab-holder {
+    display: inline-block; }
+    .tabs .caption-panel .tab-holder .tab-caption {
+      display: inline-block;
+      font-family: "Theinhardt";
+      font-weight: 500;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 15px;
+      margin: 0 15px;
+      color: #a9a9a9; }
+      .tabs .caption-panel .tab-holder .tab-caption.active {
+        color: #000; }
+
+.tabs .tab-panel {
+  margin-top: 40px;
+  position: relative; }
+  .tabs .tab-panel .tab {
+    background: color(White, Text); }
+    .tabs .tab-panel .tab:not(:first-child) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      height: 100%;
+      width: 100%; }
+    .tabs .tab-panel .tab.active {
+      display: block;
+      -webkit-animation: show 0.5s ease-out;
+      -moz-animation: show 0.5s ease-out;
+      -ms-animation: show 0.5s ease-out;
+      -o-animation: show 0.5s ease-out;
+      animation: show 0.5s ease-out; }
+    .tabs .tab-panel .tab:not(.active):not(:first-child) {
+      -webkit-animation: hide 0.5s ease-out;
+      -moz-animation: hide 0.5s ease-out;
+      -ms-animation: hide 0.5s ease-out;
+      -o-animation: hide 0.5s ease-out;
+      animation: hide 0.5s ease-out; }
+    .tabs .tab-panel .tab p {
+      font-family: "Theinhardt";
+      font-weight: 300;
+      font-size: 30px;
+      padding: 0 60px 20px 100px; }
+
+@media screen and (max-width: 960px) {
+  .tabs .caption-panel .tab-holder {
+    text-align: center; }
+    .tabs .caption-panel .tab-holder .tab-caption {
+      width: 50%;
+      text-align: center; }
+      .tabs .caption-panel .tab-holder .tab-caption.active {
+        border-bottom: 1px solid #d8d8d8; }
+  .tabs .tab-panel {
+    margin-top: 40px; }
+    .tabs .tab-panel .tab p {
+      font-size: 18px;
+      padding: 0 30px 40px 30px; } }
+
+/**
+* Vertical Slider Component
+*/
+.vertical-slider {
+  width: 100%; }
+  .vertical-slider ul {
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out; }
+    .vertical-slider ul li {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      -webkit-transition: all .5s ease-out;
+      -o-transition: all .5s ease-out;
+      transition: all .5s ease-out; }
+      .vertical-slider ul li.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50; }
+      .vertical-slider ul li.active:not(.fixed) {
+        z-index: 51; }
+      .vertical-slider ul li, .vertical-slider ul li * {
+        -webkit-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        transition: all .5s ease-out; }
+      .vertical-slider ul li img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        right: 0;
+        bottom: 0; }
+      .vertical-slider ul li .text {
+        position: absolute;
+        bottom: 100px;
+        left: 100px;
+        max-width: 460px;
+        font-family: "GT-Walsheim";
+        color: color(White, Text); }
+        .vertical-slider ul li .text .brand {
+          font-size: 24px; }
+        .vertical-slider ul li .text .desc {
+          font-size: 50px; }
+
+@media screen and (max-width: 960px) {
+  .vertical-slider ul li {
+    height: 400px; }
+    .vertical-slider ul li .text {
+      bottom: 30px;
+      left: 30px;
+      max-width: 300px; }
+      .vertical-slider ul li .text .brand {
+        font-size: 18px; }
+      .vertical-slider ul li .text .desc {
+        font-size: 24px;
+        font-weight: 200; } }
+
+/**
+* Video Component
+*/
+.video {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  .video .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #E62739;
+    cursor: pointer;
+    z-index: 20; }
+    .video .play-button:before {
+      font-family: "Icon"; }
+  .video .text {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    font-family: "GT-Walsheim";
+    font-weight: 600;
+    font-size: 70px;
+    text-align: center;
+    color: color(White, Text);
+    z-index: 25;
+    margin-top: -60px; }
+    .video .text + .play-button {
+      margin-top: 60px; }
+  .video iframe {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .video.full {
+    height: 100vh; }
+  .video.playing iframe {
+    z-index: 30;
+    -webkit-animation: show 0.3s ease-out;
+    -moz-animation: show 0.3s ease-out;
+    -ms-animation: show 0.3s ease-out;
+    -o-animation: show 0.3s ease-out;
+    animation: show 0.3s ease-out; }
+  .video > img, .video img.cover {
+    position: relative;
+    height: auto;
+    width: 100%;
+    z-index: 10; }
+
+@media screen and (max-width: 960px) {
+  .video .text {
+    font-size: 40px;
+    margin-top: -40px; }
+    .video .text + .play-button {
+      margin-top: 40px; }
+  .video img, .video img.cover {
+    height: 100vh;
+    width: auto;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); } }
+
+/**
+* Header
+*/
+header {
+  position: absolute;
+  width: 100%;
+  height: 136px;
+  padding: 56px;
+  z-index: 50; }
+  header .logo {
+    float: left; }
+    header .logo img {
+      height: 24px;
+      width: auto; }
+      header .logo img.reverse {
+        display: none; }
+  header nav {
+    float: right; }
+    header nav ul li {
+      display: inline-block;
+      margin: 0 8px; }
+      header nav ul li.mobile {
+        display: none;
+        color: color(White, Text);
+        font-size: 25px;
+        cursor: pointer; }
+      header nav ul li a, header nav ul li label {
+        padding: 0 4px;
+        color: color(White, Text);
+        text-decoration: none;
+        line-height: 24px;
+        font-weight: 500;
+        font-family: Theinhardt;
+        cursor: pointer; }
+        header nav ul li a i, header nav ul li label i {
+          font-size: 12px;
+          line-height: 24px; }
+    .mobileMenuOpened {
+      overflow: hidden; }
+    .mobileMenuOpened header nav {
+      display: table;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(230, 39, 57, 0.8);
+      -webkit-animation: scale 0.3s;
+      -moz-animation: scale 0.3s;
+      -ms-animation: scale 0.3s;
+      -o-animation: scale 0.3s;
+      animation: scale 0.3s; }
+      .mobileMenuOpened header nav.hide-menu {
+        -webkit-animation: scaleReverse 0.4s;
+        -moz-animation: scaleReverse 0.4s;
+        -ms-animation: scaleReverse 0.4s;
+        -o-animation: scaleReverse 0.4s;
+        animation: scaleReverse 0.4s; }
+      .mobileMenuOpened header nav ul {
+        display: table-cell;
+        vertical-align: middle; }
+        .mobileMenuOpened header nav ul li {
+          display: inline-block;
+          width: 100%;
+          margin: 15px 0;
+          text-align: center; }
+          .mobileMenuOpened header nav ul li a {
+            font-size: 40px;
+            color: color(White, Text); }
+        .mobileMenuOpened header nav ul li.language {
+          display: none; }
+        .mobileMenuOpened header nav ul li.mobile {
+          position: absolute;
+          top: 36px;
+          right: 36px;
+          width: auto;
+          margin: 0 8px; }
+          .mobileMenuOpened header nav ul li.mobile i {
+            color: color(White, Text); }
+  header.reverse {
+    position: relative;
+    height: 108px;
+    padding: 42px 56px;
+    border-bottom: 1px solid #D8D8D8; }
+    header.reverse .logo img {
+      display: none; }
+      header.reverse .logo img.reverse {
+        display: block; }
+    header.reverse ul li.mobile {
+      color: #000; }
+    header.reverse ul li a {
+      color: #000; }
+
+@media screen and (max-width: 960px) {
+  header {
+    padding: 36px; }
+    header nav ul li {
+      display: none; }
+      header nav ul li.mobile {
+        display: block; }
+    header.reverse {
+      padding: 42px 36px; } }
+
+/**
+* General Properties
+*/
+div[id*="lblBanner"] {
+  text-align: center; }
+
+img.responsive, .client-boxes > div img, .hire-rows ul li img {
+  width: 100%;
+  height: auto; }
+
+.inline-block {
+  display: inline-block; }
+
+.urunPaging {
+  display: none; }
+
+.hidden {
+  display: none !important; }
+
+.page-text {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto; }
+  .page-text.full {
+    width: 100%; }
+  .page-text .text {
+    font-family: "Theinhardt";
+    font-weight: 200;
+    font-size: 32px;
+    margin-bottom: 128px; }
+    .page-text .text.centered, .page-text .text.centered * {
+      text-align: center; }
+
+@media screen and (max-width: 960px) {
+  .page-text {
+    width: 90%; }
+    .page-text p {
+      font-size: 22px;
+      margin-bottom: 50px;
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+/**
+* About Properties
+*/
+.about-capabilities {
+  margin-top: 100px;
+  background: #000;
+  padding: 100px;
+  width: 100%;
+  font-size: 0; }
+  .about-capabilities * {
+    font-family: "Theinhardt";
+    color: color(White, Text); }
+  .about-capabilities .slogan {
+    font-weight: 200;
+    font-size: 34px; }
+  .about-capabilities .features {
+    text-align: center; }
+    .about-capabilities .features ul {
+      display: inline-block;
+      width: 55%; }
+      .about-capabilities .features ul.secondary {
+        margin-top: 40px; }
+      .about-capabilities .features ul li {
+        width: 100%;
+        text-align: left;
+        font-weight: 200;
+        font-size: 30px; }
+        .about-capabilities .features ul li.cap {
+          font-weight: 400;
+          font-size: 40px;
+          padding-bottom: 30px; }
+  .about-capabilities .caption {
+    padding-top: 40px; }
+
+@media screen and (max-width: 960px) {
+  .about-capabilities {
+    margin-top: 0;
+    padding: 50px 30px; }
+    .about-capabilities .slogan {
+      font-size: 18px;
+      padding-bottom: 25px;
+      letter-spacing: .5px; }
+    .about-capabilities .features ul {
+      width: 45%; }
+      .about-capabilities .features ul.secondary {
+        margin-left: 10%;
+        margin-top: 0; }
+      .about-capabilities .features ul li {
+        font-size: 14px;
+        padding: 2px 0; }
+        .about-capabilities .features ul li.cap {
+          font-size: 18px;
+          padding-bottom: 15px;
+          letter-spacing: .5px; }
+    .about-capabilities .caption {
+      max-width: 100px;
+      padding-top: 50px; } }
+
+.how-we-work {
+  padding: 100px;
+  background: #EEEEEE; }
+  .how-we-work h3 {
+    font-family: "GT-Walsheim";
+    font-size: 60px; }
+  .how-we-work p {
+    font-family: "Theinhardt";
+    font-size: 34px;
+    font-weight: 300;
+    padding-left: 50px; }
+
+@media screen and (max-width: 960px) {
+  .how-we-work {
+    padding: 50px 30px; }
+    .how-we-work h3 {
+      font-size: 26px; }
+    .how-we-work p {
+      font-size: 18px;
+      padding: 25px 0 0 0; } }
+
+/**
+* Experties 
+*/
+.video-boxes ul {
+  font-size: 0; }
+  .video-boxes ul li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding-bottom: 200px; }
+    .video-boxes ul li .caption {
+      position: absolute;
+      top: calc(100% - 400px);
+      width: 60%;
+      padding: 60px 0 0 60px;
+      z-index: 40;
+      color: color(White, Text); }
+    .video-boxes ul li .description {
+      position: absolute;
+      top: calc(100% - 200px);
+      padding: 40px 160px 0 60px; }
+
+@media screen and (max-width: 960px) {
+  .video-boxes ul li {
+    width: 100%;
+    padding-bottom: 100px; }
+    .video-boxes ul li .caption {
+      position: absolute;
+      top: calc(100% - 250px);
+      width: 65%;
+      padding: 60px 0 0 30px;
+      color: color(White, Text); }
+    .video-boxes ul li .description {
+      position: absolute;
+      top: calc(100% - 120px);
+      padding: 40px 60px 0 30px; } }
+
+footer {
+  margin-top: 100px;
+  font-size: 0; }
+  footer > * {
+    width: 50%;
+    float: left; }
+  footer .row {
+    width: 100%;
+    height: 100px; }
+    footer .row, footer .row ul {
+      text-align: center; }
+    footer .row.social {
+      background-color: #F4F4F4; }
+      footer .row.social ul li {
+        display: inline-block;
+        margin: 32px 10px; }
+        footer .row.social ul li a {
+          display: inline-block;
+          margin: 0 10px;
+          padding: 8px 4px;
+          font-size: 20px;
+          color: color(Black, Text);
+          font-family: "Theinhardt";
+          font-weight: 500; }
+    footer .row.san-francisco {
+      background-color: #E3E3E3; }
+    footer .row.teknopark {
+      background-color: #E62739; }
+    footer .row.galata {
+      background-color: #383838; }
+    footer .row.copright {
+      background-color: #FFFFFF; }
+      footer .row.copright span {
+        font-family: "Theinhardt";
+        font-weight: 400;
+        font-size: 18px;
+        color: #9B9B9B; }
+    footer .row span {
+      font-family: "GT-Walsheim";
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 100px; }
+  footer .map {
+    background: #000;
+    height: 500px; }
+    footer .map img {
+      width: 100%;
+      height: 100%; }
+
+@media screen and (max-width: 960px) {
+  .map {
+    display: none; }
+  footer > * {
+    width: 100%; }
+    footer > * .row.social ul li a {
+      font-size: 16px;
+      margin: 0; } }
+
+/*# sourceMappingURL=style.css.map */

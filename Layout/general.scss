@@ -1,0 +1,1567 @@
+// General Typings
+
+.caption{
+	font-family: "GT-Walsheim";
+	font-weight: 500;
+	font-size: 40px;
+}
+.description{
+	font-family: "Theinhardt";
+	font-weight: 200;
+	font-size: 25px;
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.caption{
+		font-size: 24px;
+	}
+	.description{
+		font-size: 18px;
+	}
+}
+/**
+ * Animations
+ */
+
+@include keyframes(show){
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@include keyframes(hide){
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+@include keyframes(scale){
+	0%{transform: scale(0);}
+	100%{transform: scale(1);}
+}
+@include keyframes(scaleReverse){
+	0%{transform: scale(1);}
+	50%{transform: scale(0);}
+	100%{transform: scale(0);}
+}
+.banner{
+	position: relative;
+	overflow: hidden;
+	font-size: 0;
+
+	&.full{
+		height: 100vh;
+	}
+
+	.text{
+		width: 50%;
+		left: 25%;
+
+		font-family: "GT-Walsheim";
+		font-weight: 600;
+		font-size: 70px;
+		color: $whiteColor;
+		text-align: center;
+
+		@include vAlign;
+		position: absolute;
+	}
+
+	img{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.banner{
+		&.full{
+			height: auto;
+		}
+
+		.text{
+			left: 10%;
+			width: 80%;
+			font-size: 40px;
+			line-height: 50px;
+		}
+	}
+}
+/**
+* Brands Component
+*/
+
+.brands{
+	margin: 150px auto 75px;
+	width: 80%;
+	text-align: center;
+
+	ul{
+		font-size: 0;
+		li{
+			display: inline-block;
+			width: 20%;
+			height: 125px;
+			text-align: center;
+			vertical-align: middle;
+			&:nth-child(n + 11){
+				display: none;
+			}
+			img{
+				@include vAlign;
+				max-width: 100%;
+				transition: all .3s ease-out;
+				transition-delay: .2s;
+			}
+			&.unvisible img{ 
+				opacity: 0;
+			}
+		}
+	}
+
+	.button{
+		margin-top: 75px;
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.brands{
+		margin: 50px auto;
+		width: 90%;
+
+		ul{
+			li{
+				width: 25%;
+				margin: (25% / 6);
+				&:nth-child(n + 10){
+					display: none;
+				}
+			}
+		}
+	}
+}
+.button{
+	display: block;
+	padding: 24px 96px;	
+	border: none;
+
+	font-family: 'GT-Walsheim';
+	font-size: 20px;
+	font-weight: 500;
+
+	outline: none;
+	cursor: pointer;
+	white-space: nowrap;
+
+	$this: &;
+	@at-root a#{$this}{
+		display: inline-block;
+	}
+
+	&[centered]{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	&[themed], &[theme="default"]{
+		background-color: $siteColor;
+		color: $whiteColor;
+	}
+
+	&[margin]{
+		margin: 70px auto 50px;
+	}
+}
+
+.case-study-active{
+	overflow: hidden;
+
+	.case-study{
+		transform: scale(1);
+		@include animation(scale);
+		
+		animation-duration: .3s;
+	}
+}
+
+.case-study{
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255, 0.8);
+	overflow: hidden;
+	overflow-y: auto;
+	transform: scale(0);
+
+	&.hide{
+		@include animation(scaleReverse .4s);
+	}
+
+	.close{
+		position: absolute;
+		top: 40px;
+		right: 30px;
+		font-size: 30px;
+		color: $siteColor;
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+		z-index: 999;
+	}
+
+	.banner{
+		overflow: auto;
+		min-height: 100%;
+		position: relative;
+
+		.info{
+			max-width: 400px;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			background: #000;
+			padding: 40px 100px 100px 30px;
+			color: $whiteColor;
+		}
+		.caption{
+			padding-bottom: 20px;
+		}
+		.description{
+			padding-bottom: 100px;
+		}
+		a{
+			color: $whiteColor;
+			text-decoration: none;
+			font-size: 22px;
+			display: inline-block;
+			margin-bottom: 10px;
+
+			border-bottom: 1px solid #FFF;
+		}
+	}
+
+	.change-study{
+		position: relative;
+		height: 300px;
+		padding: 0 100px;
+		
+		font-family: "GT-Walsheim";
+		font-weight: 300;
+		font-size: 25px;
+		line-height: 300px;
+		color: $whiteColor;
+
+		&.prev{
+			background: #622E97;
+		}
+		&.next{
+			background: #14B1BA;
+			text-align: right;
+		}
+
+		a{
+			@include setAbsolute;
+		}
+	}
+}
+
+@include keyframes(scale){
+	0%{
+		transform: scale(0);
+	}
+	80%{
+		transform: scale(.9);
+	}
+	80%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: sclae(1);
+	}
+}
+
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.case-study{
+		.banner{
+			.info{
+				width: 100%;
+				max-width: 100%;
+				padding-bottom: 30px;
+
+				.description{
+					padding-bottom: 25px;
+				}
+			}
+		}
+
+		.change-study{
+			height: 125px;
+			padding: 0;
+			
+			font-size: 20px;
+			line-height: 125px;
+			text-align: center;
+
+			&.next{
+				text-align: center;
+			}
+		}
+	}
+}
+/**
+* Client Boxes Component
+*/ 
+.client-boxes{
+	padding: 50px;
+	font-size: 0;
+	&.works{
+		> div{
+			cursor: pointer;
+			transition: opacity .2s ease-out;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+	&.three-boxes{
+		> div{width: (100% / 3);}
+		
+		&.restricted{
+			> div:nth-child(n + 4){
+				display: none;
+			}
+		}
+	}
+	> div{
+		display: inline-block;
+		
+		img{@extend img.responsive;}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.client-boxes{
+		padding: 0;
+		&.three-boxes{
+			> div{width: 50%; display: inline-block !important;}
+		}
+	}
+}
+.client-slider{
+	padding: 100px;
+	position: relative;
+
+	ul:not(.bullet){
+		position: relative;
+		overflow: hidden;
+		li{	
+			background: $whiteColor;
+			transition: all .55s ease-out;
+			position: relative;
+			&:not(:first-child){
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
+			&.active{
+				transform: translateX(0%);
+				z-index: 10;
+				//@include animation(show .5s ease-out);
+			}
+			&:not(.active){
+				transform: translateX(100%);
+				x-index: -20;
+				//@include animation(hide .5s ease-out);
+			}
+		}
+	} 
+
+	.slider-caption{
+		position: absolute;
+		font-family: "GT-Walsheim";
+		font-weight: 600;
+		font-size: 60px;
+		z-index: 20;
+	}
+
+	.client-name{
+		padding: 130px 0 40px 0;
+		font-family: "GT-Walsheim";
+		font-weight: 300;
+		font-size: 30px;
+		
+	}
+
+	.client-description{
+		font-family: "Theinhardt";
+		font-weight: 300;
+		font-size: 22px;
+	}
+
+	.brand-logos{
+		margin-top: 50px;
+
+		div{
+			display: inline-block;
+			width: 50%;
+			height: 80px;
+			img{
+				@include vAlign;
+			}
+		}
+	}
+
+
+	ul.bullet{
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		z-index: 99;
+		@include setTransform(translateX(-50%));
+
+		li{
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			margin: 0 10px;
+			background: #CCC;
+			cursor: pointer;
+
+			&.active{
+				background: $siteColor;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.client-slider{
+		padding: 50px 30px;
+
+		.slider-caption{
+			font-size: 26px;
+		}
+
+		.client-name{
+			padding: 0 0 15px 40%;
+			font-size: 18px;
+		}
+
+		.client-description{
+			padding: 0 0 30px 40%;
+			font-size: 14px;
+		}
+
+		.brand-logos{
+			margin-top: 30px;
+
+			div{
+				width: 25%;
+				margin: (25% / 6);
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+/**
+* Column Component
+**/
+
+.column-wrapper{
+	font-size: 0;
+
+	> div, [class*="col-"]{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@for $i from 1 through 10{
+		$c: $i * 10;
+		.col-#{ $c }{
+			width: #{$c}#{%};
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.hidden-mobile{
+		display: none !important;
+	}
+	.mobile-padding{
+		padding-left: 30px !important;
+	}
+	.column-wrapper{
+		@for $i from 1 through 10{
+			$c: $i * 10;
+			.col-mobile-#{ $c }{
+				width: #{$c}#{%};
+			}
+		}
+	}
+}
+@media screen and (min-width: $layoutBreakpointSM){
+
+	.hidden-desktop{
+		display: none !important;
+	}
+}
+
+.contact-rows{
+	font-size: 0;
+	> div{
+		display: inline-block;
+		width: (100% / 3);
+		position: relative;
+		padding: 60px;
+		vertical-align: top;
+		min-height: 300px;
+		&.business{
+			background: #E3E3E3;
+		}
+		&.jobs{
+			background: #E62739;
+			color: #FFF;
+		}
+		&.sayhi{
+			background: #383838;
+			color: #FFF;
+		}
+	}
+	.caption{
+		padding-bottom: 5px;
+	}
+	.mail{
+		position: absolute;
+		bottom: 60px;
+		left: 60px;
+
+		font-family: "Theinhardt";
+		font-weight: 300;
+		font-size: 22px;
+		color: inherit;
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.contact-rows{
+		> div{
+			width: 100%;
+			padding: 30px;
+			min-height: 180px;
+		}
+		.caption{
+			padding-bottom: 10px;
+		}
+		.mail{
+			bottom: 30px;
+			left: 30px;
+		}
+	}
+}
+.counters{
+	font-size: 0;
+	&.four-property{
+		> div {
+			width: 25%;
+		}
+	}
+	&.three-property{
+		> div {
+			width: (100% / 3);
+			margin-bottom: 100px;
+		}
+	}
+
+	> div{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.number{
+		font-family: "GT-Walsheim";
+		font-weight: 500;
+		font-size: 70px;
+		margin-bottom: 40px;
+	}
+	.text{
+		font-family: "Theinhardt";
+		font-weight: 200;
+		font-size: 30px;
+		padding-right: 20px;
+	}
+
+
+
+	&.dark-theme{
+		background: #231F2E;
+		padding: 180px 120px 20px;
+		color: $whiteColor;
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.counters{
+		&.four-property{
+			> div {
+				width: 50%;
+			}
+		}
+		&.three-property{
+			> div {
+				width: 100%;
+			}
+		}
+		&.dark-theme{
+			background: #231F2E;
+			padding: 50px 30px 20px;
+			color: $whiteColor;
+		}
+
+		> div{
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 50px;
+		}
+
+		.number{
+			font-size: 50px;
+			margin-bottom: 20px;
+		}
+		.text{
+			font-size: 25px;
+		}
+	}
+}
+.heading{
+	display: inline-block;
+	min-width: 50%;
+	margin: 100px auto 50px auto;
+
+	font-family: "GT-Walsheim";
+	font-weight: 500;
+	text-align: center;
+
+	$this: &;
+	@at-root #{"h1" + $this}{
+		font-size: 60px;
+	}
+
+	@at-root #{"h3" + $this}{
+		font-size: 40px;
+	}
+
+
+	&.centered{
+		width: 100%;
+	}
+	&.left{
+		width: 100%;
+		padding-left: 100px;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.heading{
+		margin: 50px auto 25px auto;
+
+		$this: &;
+		@at-root #{"h1" + $this}{
+			font-size: 30px;
+		}
+
+		@at-root #{"h3" + $this}{
+			font-size: 40px;
+		}
+
+		&.left{
+			padding-left: 20px;
+		}
+	}
+}
+/**
+* Headline Component
+*/
+
+.headline{
+	margin: 200px auto;
+	width: 60%;
+	text-align: center;
+	font-size: 48px;
+  	font-weight: 500;
+	line-height: 60px;
+
+	font-family: "GT-Walsheim";
+	font-weight: 500;
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.headline{
+		margin: 50px auto;
+		font-size: 21px;
+		line-height: 30px;
+	}
+}
+.hire-rows{
+	ul li{
+		&:nth-child(even){
+			> div:last-child{
+				float:left;
+			}
+		}
+		&:before, &:after{
+			@include clearfix;
+		}
+		> div{
+			position: relative;
+		}
+
+		.caption, .description{
+			padding: 100px 100px 0;
+		}
+		.description{
+			padding-top: 50px;
+		}
+		img{
+			@extend img.responsive;
+		}
+		.button{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.hire-rows{
+		ul li{
+			width: 90%;
+			margin: 50px auto;
+
+			.caption, .description{
+				padding: 10px 0 25px;
+			}
+		}
+	}
+}
+.language{
+	position: relative;
+	margin: 0;
+	font-size: 0;
+
+	input{
+		@include hide;
+		
+		&:focus{
+			+ label{
+				background: $whiteColor;
+				color: #000;
+				+ ul{
+					display: block;
+				}
+			}
+		}
+	}
+	label{
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+
+	ul{
+		display: none;
+		position: absolute;
+		background: $whiteColor;
+		width: 100%;
+		right: 0;
+		top: 100%;
+		font-size: 15px;
+		padding: 10px 0;
+
+		li{
+			width: 100%;
+			color: #000;
+			margin: 0;
+			padding: 0px 15px;
+
+			a{
+				padding: 0;
+				color: #000;
+				img{
+					display: none;
+				}
+				&.selected{
+					b{
+						color: $siteColor;
+					}
+				}
+				
+			}
+		}
+	}
+	.reverse & {
+		label{
+			color: #000;
+		}
+		input:focus{
+			+ label{
+				background: #000;				
+				color: $whiteColor;
+			}
+		}
+		ul li{
+			&, a{color: $whiteColor;}
+		}
+	}
+}
+.locations{
+	.caption{
+		padding: 100px;
+	}
+	.description, .map{
+		padding-left: 100px;
+	}
+	.map{
+		padding-top: 100px;
+		cursor: pointer;
+		display: inline-block;
+		color: inherit;
+		i{
+			font-size: 15px;
+			color: $siteColor;
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.locations{
+		.caption{
+			padding: 30px;
+		}
+		.description, .map{
+			padding-left: 30px;
+			padding-right: 20px;
+		}
+		.map{
+			padding-top: 50px;
+		}
+	}
+
+}
+/**
+* Tabs Component
+*/
+
+.tabs{
+	.caption-panel{
+		width: 100%;
+		text-align: center;
+		.tab-holder{
+			display: inline-block;
+			.tab-caption{
+				display: inline-block;
+				font-family: "Theinhardt";
+				font-weight: 500;
+				font-size: 20px;
+				cursor: pointer;
+				
+				padding: 15px;
+				margin: 0 15px;
+				color: #a9a9a9;
+
+				&.active{
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.tab-panel{
+		margin-top: 40px;
+		position: relative;
+		.tab{
+			background: $whiteColor;
+			&:not(:first-child){
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+				height: 100%;
+				width: 100%;
+			}
+			&.active{
+				display: block;
+				@include animation(show .5s ease-out);
+			}
+			&:not(.active):not(:first-child){
+				@include animation(hide .5s ease-out);
+			}
+
+			p{
+				font-family: "Theinhardt";
+				font-weight: 300;
+				font-size: 30px;
+				padding: 0 60px 20px 100px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.tabs{
+		.caption-panel{
+			.tab-holder{
+				text-align: center;
+				.tab-caption{
+					width: 50%;
+					text-align: center;
+					&.active{
+						border-bottom: 1px solid #d8d8d8;
+					}
+				}
+			}
+		}
+
+		.tab-panel{
+			margin-top: 40px;
+			.tab{
+
+				p{
+					font-size: 18px;
+					padding: 0 30px 40px 30px;
+				}
+			}
+		}
+	}
+}
+/**
+* Vertical Slider Component
+*/
+
+.vertical-slider{
+	width: 100%;
+	ul{
+		transition: all .5s ease-out;
+		li{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			transition: all .5s ease-out;
+			
+
+			&.fixed{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 50;
+			}
+
+			&.active:not(.fixed){
+				
+				z-index: 51;
+			}
+
+			&, * {
+				transition: all .5s ease-out;
+			}
+			img{
+				position: absolute;
+				height: 100%;
+				width: auto;
+				right: 0;
+				bottom: 0;
+			}
+			.text{
+				position: absolute;
+				bottom: 100px;
+				left: 100px;
+				max-width: 460px;
+
+				font-family: "GT-Walsheim";
+				color: $whiteColor;
+				.brand{
+					font-size: 24px;
+				}
+				.desc{
+					font-size: 50px;
+				}
+			}	
+
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.vertical-slider{
+		ul li {
+			height: 400px;
+			.text{
+				bottom: 30px;
+				left: 30px;
+				max-width: 300px;
+				
+				.brand{
+					font-size: 18px;
+				}
+				.desc{
+					font-size: 24px;
+					font-weight: 200;
+				}
+			}	
+		}
+	}
+}
+/**
+* Video Component
+*/
+
+.video{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	// Play Button
+	.play-button{
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		
+		font-size: 60px;
+		color: $siteColor;
+		cursor: pointer;
+		z-index: 20;
+		
+
+		&:before{
+			font-family: "Icon";
+			@extend .icon-arrowRight:before;
+		}
+	}
+	.text{
+		@include vAlign;
+		position: absolute;	
+		width: 100%;
+		font-family: "GT-Walsheim";
+		font-weight: 600;
+		font-size: 70px;
+		text-align: center;
+		color: $whiteColor;
+		z-index: 25;
+		margin-top: -60px;
+		+ .play-button{
+			margin-top: 60px;
+		}
+	}
+
+	iframe{
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
+	&.full{
+		height: 100vh;
+	}
+
+	&.playing{
+		iframe{
+			z-index: 30;
+			@include animation(show .3s ease-out);
+		}		
+	}
+
+	// Cover Image
+	> img, img.cover{
+		
+		position: relative;
+		height: auto;
+		width: 100%;
+		z-index: 10;
+
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.video{
+		.text{
+			font-size: 40px;
+			margin-top: -40px;
+			+ .play-button{
+				margin-top: 40px;
+			}
+		}
+		img, img.cover{
+			height: 100vh;
+			width: auto;
+			@include hAlign;
+		}
+	}
+}
+/**
+* Header
+*/
+
+header{
+	position: absolute;
+	width: 100%;
+	height: 136px;
+	padding: 56px;
+	z-index: 50;
+
+	.logo{
+		float: left;
+
+		img{
+			height: 24px;
+			width: auto;
+
+			&.reverse{
+				display: none;
+			}
+		}
+	}
+	nav{
+		float: right;
+
+		ul{
+			li{
+				display: inline-block;
+				margin: 0 8px;
+
+				&.mobile{
+					display: none;
+					color: $whiteColor;
+					font-size: 25px;
+					cursor: pointer;
+				}
+
+				a, label{
+					padding: 0 4px;
+					color: $whiteColor;
+					text-decoration: none;
+					line-height: 24px;
+					font-weight: 500;
+					font-family: Theinhardt;
+					cursor: pointer;
+
+					i{
+						font-size: 12px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+
+		@at-root .mobileMenuOpened{
+			overflow: hidden;
+		}
+		.mobileMenuOpened &{
+			display: table;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($siteColor, 0.8);
+			@include animation(scale .3s);
+
+			&.hide-menu{
+				@include animation(scaleReverse .4s);
+			}
+
+			ul{
+				display: table-cell;
+				vertical-align: middle;
+				li{
+					display: inline-block;
+					width: 100%;
+					margin: 15px 0;
+					text-align: center;
+					a{
+						font-size: 40px;
+						color: $whiteColor;
+					}
+				}
+				li.language{
+					display: none;
+				}
+				li.mobile{
+					position: absolute;
+					top: 36px;
+					right: 36px;
+					width: auto;
+					margin: 0 8px;
+					i{
+						color: $whiteColor;
+						&:before{
+							@extend .icon-cancel:before;
+						}
+					}
+				}
+			}
+			
+		}
+	}
+
+	&.reverse{
+		position: relative;
+		height: 108px;
+		padding: 42px 56px;
+		border-bottom: 1px solid #D8D8D8;
+
+		.logo img{
+			display: none;
+			&.reverse{
+				display: block;
+			}
+		}
+
+		ul li{
+			&.mobile{
+				color: #000;
+			}
+			a{color: #000}
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	header{
+		padding: 36px;
+		
+		nav ul li{
+			display: none;
+			&.mobile{
+				display: block;
+			}
+		}
+
+		&.reverse{
+			padding: 42px 36px;
+		}	
+	}
+
+}
+/**
+* General Properties
+*/
+div[id*="lblBanner"] {
+    text-align: center;
+}
+img.responsive{
+	width: 100%;
+	height: auto;
+}
+.inline-block{
+	display: inline-block;
+}
+.urunPaging {
+	display: none;
+}
+.hidden{
+	display: none !important;
+}
+
+.page-text{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.full{
+		width: 100%;
+	}
+	.text{
+		font-family: "Theinhardt";
+		font-weight: 200;
+		font-size: 32px;
+		
+		// For counters
+		margin-bottom: 128px;
+		
+		&.centered{
+			&, *{
+				text-align: center;
+			}
+		}
+	}
+}
+@media screen and (max-width: $layoutBreakpointSM){
+	.page-text{
+		width: 90%;
+		p{
+			font-size: 22px;
+			margin-bottom: 50px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+/**
+* About Properties
+*/
+.about-capabilities{
+	margin-top: 100px;
+	background: #000;
+	padding: 100px;
+	width: 100%;
+	font-size: 0;
+
+	*{
+		font-family: "Theinhardt";
+		color: $whiteColor;
+	}
+
+	.slogan{
+		font-weight: 200;
+		font-size: 34px;
+	}
+
+	.features{
+		text-align: center;
+
+		ul{
+			display: inline-block;
+			width: 55%;
+			&.secondary{
+				margin-top: 40px;
+			}
+			li{
+				width: 100%;
+				text-align: left;
+				font-weight: 200;
+				font-size: 30px;
+
+				&.cap{
+					font-weight: 400;
+					font-size: 40px;
+					padding-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	.caption{
+		padding-top: 40px;
+	}
+}
+@media screen and (max-width: $layoutBreakpointSM){
+	.about-capabilities{
+		margin-top: 0;
+		padding: 50px 30px;
+		.slogan{
+			font-size: 18px;
+			padding-bottom: 25px;
+			letter-spacing: .5px;
+		}
+
+		.features{
+			ul{
+				width: 45%;
+				&.secondary{
+					margin-left: 10%;
+					margin-top: 0;
+				}
+				li{
+					font-size: 14px;
+					padding: 2px 0;
+					&.cap{
+						font-size: 18px;
+						padding-bottom: 15px;
+						letter-spacing: .5px;
+					}
+				}
+			}
+		}
+
+		.caption{
+			max-width: 100px;
+			padding-top: 50px;
+		}
+	}
+}
+
+
+.how-we-work{
+	padding: 100px;
+	background: #EEEEEE;
+	h3{
+		font-family: "GT-Walsheim";
+		font-size: 60px;
+	}
+	p{
+		font-family: "Theinhardt";
+		font-size: 34px;
+		font-weight: 300;
+		padding-left: 50px;
+	}
+}
+@media screen and (max-width: $layoutBreakpointSM){
+	.how-we-work{
+		padding: 50px 30px;
+		h3{
+			font-size: 26px;
+		}
+		p{
+			font-size: 18px;
+			padding: 25px 0 0 0;
+		}
+	}
+}
+
+
+
+/**
+* Experties 
+*/
+.video-boxes{
+	ul{
+		font-size: 0;
+		
+		li{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			padding-bottom: 200px;
+
+			.caption{
+				position: absolute;
+				top: calc(100% - 400px);
+				width: 60%;
+				padding: 60px 0 0 60px;
+				z-index: 40;
+				color: $whiteColor;
+			}
+
+			.description{
+				position: absolute;
+				top: calc(100% - 200px);
+				padding: 40px 160px 0 60px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.video-boxes{
+		ul{
+			li{
+				width: 100%;
+				padding-bottom: 100px;
+
+				.caption{
+					position: absolute;
+					top: calc(100% - 250px);
+					width: 65%;
+					padding: 60px 0 0 30px;
+
+					color: $whiteColor;
+				}
+
+				.description{
+					position: absolute;
+					top: calc(100% - 120px);
+					padding: 40px 60px 0 30px;
+				}
+			}
+		}
+	}
+}
+footer{
+	margin-top: 100px;
+	font-size: 0;
+	> *{
+		width: 50%;
+		float: left;
+	}
+	.row{
+		width: 100%;
+		height: 100px; 
+		
+		&, ul{
+			text-align: center;
+		}
+		
+		&.social{
+			background-color: #F4F4F4;
+			ul{
+				li{
+					display: inline-block;
+					margin: 32px 10px;
+					a{
+						display: inline-block;
+						margin: 0 10px;
+						padding: 8px 4px;
+						font-size: 20px;
+						color: $blackColor;
+						font-family: "Theinhardt";
+						font-weight: 500;
+					}
+				}
+			}
+		}
+		&.san-francisco{background-color: #E3E3E3;}
+		&.teknopark{background-color: #E62739;}
+		&.galata{background-color: #383838;}
+		&.copright{
+			background-color: #FFFFFF;
+			span{
+				font-family: "Theinhardt";
+				font-weight: 400;
+				font-size: 18px;
+				color: #9B9B9B;
+			}
+		}
+
+		span{
+			font-family: "GT-Walsheim";
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 100px;
+		}
+	}
+
+	.map{
+		background: #000;
+		height: 500px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: $layoutBreakpointSM){
+	.map{
+		display: none;
+	}
+	footer > *{
+		width: 100%;
+		
+		.row.social{
+			ul li{
+				a{
+					font-size: 16px;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	
+}
